@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0
+apiversion: 2
+description: Social module
+author: Marcel Pociot
+license: MIT
+copyright: Marcel Pociot
+
+
+# these should not be edited
+name: titanium-social-module
+moduleid: de.marcelpociot.social
+guid: 61aa3517-3020-4af2-a0d3-8928f3009ba8
+platform: iphone
+minsdk: 2.1.2.GA
