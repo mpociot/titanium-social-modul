@@ -6,8 +6,8 @@
 // for this file:
 // http://developer.apple.com/mac/library/documentation/DeveloperTools/Conceptual/XcodeBuildSystem/400-Build_Configurations/build_configs.html
 // 
-OTHER_LDFLAGS[sdk=iphoneos6*]=$(inherited) -framework Social -framework Accounts
-OTHER_LDFLAGS[sdk=iphonesimulator6*]=$(inherited) -framework Social -framework Accounts
+OTHER_LDFLAGS[sdk=iphoneos6*]=$(inherited) -weak_framework Social -weak_framework Accounts
+OTHER_LDFLAGS[sdk=iphonesimulator6*]=$(inherited) -weak_framework Social -weak_framework Accounts
 
 //
 // How to add a Framework (example)
