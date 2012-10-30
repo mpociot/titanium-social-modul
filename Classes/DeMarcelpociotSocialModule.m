@@ -106,6 +106,14 @@
         serviceType      = SLServiceTypeTwitter;
     } else if ([[service lowercaseString] isEqualToString:@"sinaweibo"] ){
         serviceType      = SLServiceTypeSinaWeibo;
+    } else {
+        serviceType      = NULL;
+        NSArray *postItems = @[message];
+        UIActivityViewController *activityVC = [[UIActivityViewController alloc]
+                                                initWithActivityItems:postItems
+                                                applicationActivities:nil];
+        [[TiApp app] showModalController:activityVC animated:YES];
+        return;
     }
     
     id success      = [args objectForKey:@"success"];

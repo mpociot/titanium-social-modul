@@ -18,7 +18,7 @@ tweetButton.addEventListener('click',function(e){
 		service:	'twitter',
 		message: 	'Hey, this is some cool tweet!',
 		urls: 		['http://www.marcelpociot.de'],
-		images:		['http://www.marcelpociot.de/logo.png'],
+		images:		['http://www.marcelpociot.de/badges/titan_logo_256.png'],
 		success:	function(){
 			alert("Tweet successfully sent");
 		},
@@ -43,7 +43,7 @@ facebookButton.addEventListener('click',function(e){
 		service:	'facebook',
 		message: 	'Hey, this is some cool facebook message!',
 		urls: 		['http://www.marcelpociot.de'],
-		images:		['http://www.marcelpociot.de/logo.png'],
+		images:		['http://www.marcelpociot.de/badges/titan_logo_256.png'],
 		success:	function(){
 			alert("Tweet successfully sent");
 		},
@@ -68,7 +68,7 @@ sinaweiboButton.addEventListener('click',function(e){
 		service:	'sinaweibo',
 		message: 	'Hey, this is some cool sinaweibo message!',
 		urls: 		['http://www.marcelpociot.de'],
-		images:		['http://www.marcelpociot.de/logo.png'],
+		images:		['http://www.marcelpociot.de/badges/titan_logo_256.png'],
 		success:	function(){
 			alert("Tweet successfully sent");
 		},
@@ -78,5 +78,22 @@ sinaweiboButton.addEventListener('click',function(e){
 		error:		function(){
 			alert("Unable to send tweet");
 		}
+	});
+});
+
+/**
+ * Shows the ActivityView
+ * Currently it only supports messages!
+ */
+var activityButton	= Ti.UI.createButton({
+	title: 'activity',
+	top: 190,
+	left: 10,
+	height: 50
+});
+window.add(activityButton);
+activityButton.addEventListener('click',function(e){
+	module.showSheet({
+		message: 	'Hey, this is some cool message!'
 	});
 });
