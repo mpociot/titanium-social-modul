@@ -108,9 +108,17 @@
         serviceType      = SLServiceTypeSinaWeibo;
     } else {
         serviceType      = NULL;
-        NSArray *postItems = @[message];
+        NSMutableArray *postItems = [NSMutableArray new];
+        [postItems addObject:message];
+        if( [imageArray count] > 0 ){
+            for(id image in imageArray )
+            {
+                [postItems addObject:[TiUtils toImage:image proxy:nil]];
+            }
+        }
+        NSArray *activityItems = [NSArray arrayWithArray:postItems];
         UIActivityViewController *activityVC = [[UIActivityViewController alloc]
-                                                initWithActivityItems:postItems
+                                                initWithActivityItems:activityItems
                                                 applicationActivities:nil];
         [[TiApp app] showModalController:activityVC animated:YES];
         return;

@@ -94,6 +94,7 @@ var activityButton	= Ti.UI.createButton({
 window.add(activityButton);
 activityButton.addEventListener('click',function(e){
 	module.showSheet({
-		message: 	'Hey, this is some cool message!'
+		message: 	'Hey, this is some cool message!',
+		images:		[Ti.Filesystem.getFile('KS_nav_ui.png').nativePath]
 	});
 });
